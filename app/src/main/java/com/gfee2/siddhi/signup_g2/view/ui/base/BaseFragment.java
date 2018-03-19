@@ -45,6 +45,7 @@ public abstract class BaseFragment<VM extends ViewModel, DB extends ViewDataBind
   public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
       @Nullable Bundle savedInstanceState) {
     dataBinding = DataBindingUtil.inflate(inflater, getLayoutRes(), container, false);
+
     return dataBinding.getRoot();
   }
 
