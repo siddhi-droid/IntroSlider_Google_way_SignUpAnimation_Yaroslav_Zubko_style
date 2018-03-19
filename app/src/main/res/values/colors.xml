@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#008343</color>
+  <color name="colorPrimaryDark">#006936</color>
+  <color name="colorAccent">#008343</color>
+
+  <color name="transparent">#00000000</color>
+
+  <color name="color_black">#000000</color>
+  <color name="app_toolbar_color">#008343</color>
+  <color name="app_main_color">#0B2532</color>
+  <color name="color_white">#FFFFFF</color>
+  <color name="color_white_child">#F2FCFF</color>
+  <color name="color_red">#FE5455</color>
+  <color name="color_green">#79C346</color>
+  <color name="color_gray">#C5C5C5</color>
+  <color name="color_blue">#00CCFF</color>
+
+  <color name="text_color_light_gray">#3D5873</color>
+
+  <color name="task_red">#FF5455</color>
+  <!-- <color name="task_green">#79C447</color>-->
+  <color name="task_yellow">#FABB3B</color>
+  <color name="task_gray">#C5C5C5</color>
+
+  <color name="task_green">#46A24A</color>
+  <color name="meeting_blue">#00B0FF</color>
+  <color name="risky_red">#FD7865</color>
+  <color name="main_text_color">#4D4D4D</color>
+  <color name="normal_text_color">#999999</color>
+  <color name="cancel_button_background">#A1A1A1</color>
+  <color name="divider_color">#999999</color>
+
+  <color name="productivity_task">#79C157</color>
+  <color name="productivity_internal_meeting">#00AFEF</color>
+  <color name="productivity_external_meeting">#4295B6</color>
+  <color name="productivity_free">#BEBFC1</color>
+  <color name="productivity_menial">#006400</color>
+
+  <color name="task_ratio_adhoc">#9EC9DF</color>
+  <color name="task_ratio_recurring">#6E8C9C</color>
+
+  <color name="past_due_completed">#79C157</color>
+  <color name="past_due_remaining">#BEBFC1</color>
+
+  <color name="tdr_redo">#999965</color>
+  <color name="tdr_reassign">#C9CC37</color>
+  <color name="tdr_completed">#666632</color>
+
+  <color name="cycle_report_actual">#FD715D</color>
+  <color name="cycle_report_planned">#44A64A</color>
+
+</resources>

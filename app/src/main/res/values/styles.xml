@@ -1,0 +1,140 @@
+<resources>
+
+
+  <style name="MyAppTheme" parent="@style/AppTheme">
+
+  </style>
+  <!-- Base application theme. -->
+
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <!-- Customize your theme here. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+    <item name="windowActionModeOverlay">true</item>
+
+  </style>
+
+  <style name="MainTextInputStyle" parent="Widget.Design.TextInputLayout">
+
+    <!-- Hint color and label color in FALSE state -->
+    <!--The size of the text appear on label in false state -->
+    <item name="android:textColorHint">@color/color_white_child</item>
+    <item name="android:textSize">20sp</item>
+    <item name="android:keyTextSize">25sp</item>
+    <item name="android:textColor">@color/color_white_child</item>
+    <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+    <item name="colorControlNormal">@color/color_white_child</item>
+    <item name="colorControlActivated">@color/color_white_child</item>
+
+  </style>
+
+  <style name="CreateTaskInputStyle" parent="Widget.Design.TextInputLayout">
+
+    <!-- Hint color and label color in FALSE state -->
+    <!--The size of the text appear on label in false state -->
+    <item name="android:textColorHint">@color/normal_text_color</item>
+    <item name="android:textSize">20sp</item>
+    <item name="android:keyTextSize">20sp</item>
+    <!-- <item name="android:textColor">@color/color_white_child</item>-->
+    <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+    <item name="colorControlNormal">#4D4D4D</item>
+    <item name="colorControlActivated">#4D4D4D</item>
+    <item name="colorControlHighlight">#4D4D4D</item>
+
+  </style>
+
+  <style name="CreateMeetingInputStyle" parent="Widget.Design.TextInputLayout">
+
+    <!-- Hint color and label color in FALSE state -->
+    <!--The size of the text appear on label in false state -->
+    <item name="android:textColorHint">@color/normal_text_color</item>
+    <item name="android:textSize">20sp</item>
+    <item name="android:keyTextSize">20sp</item>
+    <!--   <item name="android:textColor">@color/color_white_child</item>-->
+    <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+    <item name="colorControlNormal">#4D4D4D</item>
+    <item name="colorControlActivated">#4D4D4D</item>
+    <item name="colorControlHighlight">#4D4D4D</item>
+    <!--<item name="colorControlActivated">@color/color_blue</item>-->
+
+  </style>
+
+  <style name="MyCheckbox" parent="Base.Theme.AppCompat">
+    <!--  <item name="colorAccent">#000000</item>
+      <item name="android:textColorSecondary">#FFFFFF</item>
+      <item name="buttonTint">#ffffff</item>-->
+
+    <item name="colorControlNormal">@color/app_toolbar_color
+    </item>   <!-- normal border color change as you wish -->
+    <item name="colorControlActivated">@color/app_toolbar_color
+    </item> <!-- activated color change as you wish -->
+    <item name="android:textColor">@color/main_text_color</item>
+    <item name="android:textColorSecondary">@color/main_text_color</item>
+  </style>
+
+  <style name="LoginCheckbox" parent="Base.Theme.AppCompat">
+    <item name="colorControlNormal">@android:color/white
+    </item>   <!-- normal border color change as you wish -->
+    <item name="colorControlActivated">@color/app_toolbar_color
+    </item> <!-- activated color change as you wish -->
+    <item name="colorAccent">@android:color/white</item>
+  </style>
+
+  <style name="NavDrawerTextStyle" parent="AppTheme">
+    <item name="android:textSize">15sp</item>
+    <item name="android:background">#ffffff</item>
+  </style>
+
+  <style name="popup" parent="Widget.AppCompat.ListView.DropDown">
+    <item name="android:divider">#E8F5E9</item>
+    <item name="android:dividerHeight">1dp</item>
+    <item name="android:textColor">@color/main_text_color</item>
+    <item name="android:itemBackground">@android:color/white</item>
+    <item name="android:windowMinWidthMajor">90%</item>
+    <item name="android:windowMinWidthMinor">90%</item>
+  </style>
+
+  <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+    <!-- Required for pre-Lollipop. -->
+    <item name="overlapAnchor">false</item>
+    <item name="android:textColorPrimary">@color/color_black</item>
+    <item name="actionMenuTextColor">@android:color/holo_orange_dark</item>
+    <item name="android:textColorSecondary">@android:color/white</item>
+  </style>
+
+  <style name="ProgressDialogStyle" parent="android:Theme.Holo.Dialog">
+    <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+    <item name="android:windowBackground">@color/transparent</item>
+    <item name="android:textColorPrimary">#FFFFFF</item>
+    <item name="android:backgroundDimEnabled">false</item>
+    <item name="android:textColor">#FFFFFF</item>
+    <item name="android:textStyle">normal</item>
+    <item name="android:textSize">12sp</item>
+  </style>
+  >
+
+  <style name="CustomAlertDialogStyle">
+    <item name="android:bottomBright">@color/transparent</item>
+    <item name="android:bottomDark">@color/transparent</item>
+    <item name="android:bottomMedium">@color/transparent</item>
+    <item name="android:centerBright">@color/transparent</item>
+    <item name="android:centerDark">@color/transparent</item>
+    <item name="android:centerMedium">@color/transparent</item>
+    <item name="android:fullBright">@color/transparent</item>
+    <item name="android:fullDark">@color/transparent</item>
+    <item name="android:topBright">@color/transparent</item>
+    <item name="android:topDark">@color/transparent</item>
+  </style>
+
+  <style name="SwitchTheme" parent="Theme.AppCompat.Light">
+    <item name="colorControlActivated">@color/app_toolbar_color</item>
+  </style>
+
+  <style name="nav_drawer_style" parent="Base.Theme.AppCompat">
+    <item name="colorControlNormal">#ffffff</item>
+    <!--<item name="colorControlActivated">#ffffff</item>-->
+  </style>
+
+</resources>
