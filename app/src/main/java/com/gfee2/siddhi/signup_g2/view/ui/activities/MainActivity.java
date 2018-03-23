@@ -19,5 +19,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     dataBinding.container.setAdapter(new IntroPagerAdapter(getSupportFragmentManager()));
     dataBinding.container.setOffscreenPageLimit(3);
     dataBinding.container.setCurrentItem(0);
+    
   }
 }
