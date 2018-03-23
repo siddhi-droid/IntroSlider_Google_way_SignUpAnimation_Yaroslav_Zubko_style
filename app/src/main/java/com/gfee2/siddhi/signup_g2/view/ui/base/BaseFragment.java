@@ -14,6 +14,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.gfee2.siddhi.signup_g2.di.Injectable;
 import dagger.android.AndroidInjection;
 import javax.inject.Inject;
 
@@ -22,7 +23,7 @@ import javax.inject.Inject;
  */
 
 public abstract class BaseFragment<VM extends ViewModel, DB extends ViewDataBinding> extends
-    Fragment implements LifecycleRegistryOwner{
+    Fragment implements LifecycleRegistryOwner, Injectable {
 
   private LifecycleRegistry lifecycleRegistry = new LifecycleRegistry(this);
 

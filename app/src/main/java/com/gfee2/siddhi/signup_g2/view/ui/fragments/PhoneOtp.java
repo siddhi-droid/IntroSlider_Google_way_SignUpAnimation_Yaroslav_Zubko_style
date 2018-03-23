@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.gfee2.siddhi.signup_g2.R;
+import com.gfee2.siddhi.signup_g2.databinding.FragmentPhoneOtpBinding;
 import com.gfee2.siddhi.signup_g2.view.ui.base.BaseFragment;
 
 /**

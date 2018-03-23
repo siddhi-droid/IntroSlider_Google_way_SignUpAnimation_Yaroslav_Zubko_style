@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="core_area">
+    <attr format="color"
+        name="underline_color"/>
+    <attr format="color"
+        name="underline_selected_color"/>
+    <attr format="color"
+        name="hint_color"/>
+    <attr format="color"
+        name="text_color"/>
+    <attr format="string"
+        name="hint_text"/>
+    <attr format="integer"
+        name="codes"/>
+  </declare-styleable>
+</resources>
