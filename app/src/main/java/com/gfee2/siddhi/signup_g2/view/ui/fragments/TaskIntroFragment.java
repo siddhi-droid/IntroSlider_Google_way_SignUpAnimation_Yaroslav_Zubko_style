@@ -1,16 +1,17 @@
 package com.gfee2.siddhi.signup_g2.view.ui.fragments;
 
 import android.arch.lifecycle.ViewModelProvider;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.gfee2.siddhi.signup_g2.R;
 import com.gfee2.siddhi.signup_g2.databinding.FragmentTaskIntroBinding;
-import com.gfee2.siddhi.signup_g2.di.Injectable;
 import com.gfee2.siddhi.signup_g2.view.ui.base.BaseFragment;
 import com.gfee2.siddhi.signup_g2.viewmodel.AppIntroViewModel;
 import javax.inject.Inject;
@@ -22,9 +23,10 @@ public class TaskIntroFragment extends BaseFragment<AppIntroViewModel, FragmentT
   @Inject ViewModelProvider.Factory viewModelFactory;
   private static final String ARG_SECTION_NUMBER = "section_number";
 
-  public static TaskIntroFragment newInstance() {
+  public static TaskIntroFragment newInstance(int sectionNumber) {
     Bundle args = new Bundle();
     TaskIntroFragment fragment = new TaskIntroFragment();
+    args.putInt(ARG_SECTION_NUMBER, sectionNumber);
     fragment.setArguments(args);
     return fragment;
   }
@@ -40,7 +42,8 @@ public class TaskIntroFragment extends BaseFragment<AppIntroViewModel, FragmentT
   @Nullable @Override
   public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
       @Nullable Bundle savedInstanceState) {
-        return dataBinding.getRoot();
+    super.onCreateView(inflater, container, savedInstanceState);
+    return dataBinding.getRoot();
   }
 
   @Override public void onActivityCreated(@Nullable Bundle savedInstanceState) {

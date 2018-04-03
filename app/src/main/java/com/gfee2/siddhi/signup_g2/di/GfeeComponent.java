@@ -12,7 +12,7 @@ import javax.inject.Singleton;
  */
 
 @Singleton @Component(modules = {
-    AndroidInjectionModule.class, GfeeModules.class, BaseActivityModule.class
+    AndroidInjectionModule.class, GfeeModules.class, ActivityBuilderModule.class
 })
 public interface GfeeComponent {
   @Component.Builder interface Builder {

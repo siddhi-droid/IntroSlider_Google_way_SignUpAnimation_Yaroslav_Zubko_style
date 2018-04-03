@@ -20,7 +20,7 @@ public class GfeeInjector {
   }
 
   public static void init(GfeeApplication gfeeApplication) {
-    DaggerAppComponent.builder().application(gfeeApplication).build().inject(gfeeApplication);
+    DaggerGfeeComponent.builder().application(gfeeApplication).build().inject(gfeeApplication);
     gfeeApplication.registerActivityLifecycleCallbacks(
         new Application.ActivityLifecycleCallbacks() {
           @Override public void onActivityCreated(Activity activity, Bundle savedInstanceState) {

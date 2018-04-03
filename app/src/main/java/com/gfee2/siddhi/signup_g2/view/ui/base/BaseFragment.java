@@ -14,8 +14,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import com.gfee2.siddhi.signup_g2.di.Injectable;
-import dagger.android.AndroidInjection;
+import dagger.android.support.AndroidSupportInjection;
 import javax.inject.Inject;
 
 /**
@@ -23,7 +22,7 @@ import javax.inject.Inject;
  */
 
 public abstract class BaseFragment<VM extends ViewModel, DB extends ViewDataBinding> extends
-    Fragment implements LifecycleRegistryOwner, Injectable {
+    Fragment implements LifecycleRegistryOwner {
 
   private LifecycleRegistry lifecycleRegistry = new LifecycleRegistry(this);
 
@@ -37,7 +36,7 @@ public abstract class BaseFragment<VM extends ViewModel, DB extends ViewDataBind
   @LayoutRes public abstract int getLayoutRes();
 
   @Override public void onCreate(@Nullable Bundle savedInstanceState) {
-    AndroidInjection.inject(this.getActivity());
+    AndroidSupportInjection.inject(this);
     super.onCreate(savedInstanceState);
     viewModel = ViewModelProviders.of(this, viewModelFactory).get(getViewModel());
   }
@@ -46,7 +45,6 @@ public abstract class BaseFragment<VM extends ViewModel, DB extends ViewDataBind
   public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
       @Nullable Bundle savedInstanceState) {
     dataBinding = DataBindingUtil.inflate(inflater, getLayoutRes(), container, false);
-
     return dataBinding.getRoot();
   }
 

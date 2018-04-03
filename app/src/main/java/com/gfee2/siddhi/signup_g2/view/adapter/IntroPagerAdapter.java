@@ -16,7 +16,7 @@ public class IntroPagerAdapter extends FragmentStatePagerAdapter {
   }
 
   @Override public Fragment getItem(int position) {
-    return TaskIntroFragment.newInstance();
+    return TaskIntroFragment.newInstance(position + 1);
   }
 
   @Override public int getCount() {
