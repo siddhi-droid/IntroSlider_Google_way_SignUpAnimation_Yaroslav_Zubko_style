@@ -15,13 +15,24 @@
         >
 
       <ImageView
-          android:id="@+id/section_img"
+          android:id="@+id/section_img2"
           android:layout_width="192dp"
           android:layout_height="192dp"
           android:layout_gravity="center"
           android:adjustViewBounds="true"
           android:alpha="0.30"
-          android:background="@drawable/ic_flight_24dp"
+          android:background="@drawable/test_2"
+          android:scaleType="fitCenter"
+          />
+      <ImageView
+          android:id="@+id/section_img3"
+          android:layout_width="80dp"
+          android:layout_height="80dp"
+          android:layout_gravity="end"
+          android:layout_marginRight="10dp"
+          android:adjustViewBounds="true"
+          android:alpha="0.30"
+          android:background="@drawable/test_4"
           android:scaleType="fitCenter"
           />
 
@@ -46,12 +57,13 @@
           />
 
       <TextView
+          android:id="@+id/section_desc"
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_marginTop="@dimen/activity_horizontal_margin"
           android:alpha="0.7"
           android:gravity="center"
-          android:text="Add a long description here about app's important feature."
+          android:text="Get Your Tasks Done within in a Gfee!"
           android:textColor="@android:color/black"
           style="@style/TextAppearance.AppCompat.Body1"
           />

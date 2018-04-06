@@ -1,7 +1,6 @@
 package com.gfee2.siddhi.signup_g2.di;
 
-import com.gfee2.siddhi.signup_g2.view.ui.base.BaseFragment;
-import com.gfee2.siddhi.signup_g2.view.ui.fragments.TaskIntroFragment;
+import com.gfee2.siddhi.signup_g2.view.ui.fragments.IntroFragment;
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 
@@ -10,5 +9,5 @@ import dagger.android.ContributesAndroidInjector;
  */
 
 @Module public abstract class FragmentBuilderModule {
-  @ContributesAndroidInjector abstract TaskIntroFragment taskIntroFragment();
+  @ContributesAndroidInjector abstract IntroFragment taskIntroFragment();
 }

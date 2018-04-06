@@ -18,6 +18,13 @@ import com.gfee2.siddhi.signup_g2.R;
     @BindingMethod(type = ViewPager.class, attribute = "android:currentPage", method = "setCurrentItem")
 }) public final class ViewPagerBinder {
 
+  final static int color1 = R.color.cyan;
+  final static int color2 = R.color.orange;
+  final static int color3 = R.color.green;
+
+  final static int[] colorList = new int[] { color1, color2, color3 };
+  final static ArgbEvaluator evaluator = new ArgbEvaluator();
+
   @InverseBindingAdapter(attribute = "android:currentPage", event = "android:currentPageAttrChanged")
   public static int getCurrentPage(@NonNull final ViewPager viewPager) {
     return viewPager.getCurrentItem();
@@ -31,13 +38,6 @@ import com.gfee2.siddhi.signup_g2.R;
       final OnPageSelected selected, final OnPageScrollStateChanged scrollStateChanged,
       final InverseBindingListener currentPageAttrChanged) {
 
-    final int color1 = R.color.cyan;
-    final int color2 = R.color.orange;
-    final int color3 = R.color.green;
-
-    final int[] colorList = new int[] { color1, color2, color3 };
-    final ArgbEvaluator evaluator = new ArgbEvaluator();
-
     final ViewPager.OnPageChangeListener newListener;
     if (scrolled == null
         && selected == null
@@ -48,12 +48,21 @@ import com.gfee2.siddhi.signup_g2.R;
       newListener = new ViewPager.OnPageChangeListener() {
         @Override
         public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+          if (scrolled != null) {
+            scrolled.onPageScrolled(position, positionOffset, positionOffsetPixels);
+          }
           int colorUpdate = (Integer) evaluator.evaluate(positionOffset, colorList[position],
               colorList[position == 2 ? position : position + 1]);
           viewPager.setBackgroundColor(colorUpdate);
         }
 
         @Override public void onPageSelected(int position) {
+          if (selected != null) {
+            selected.onPageSelected(position);
+          }
+          if (currentPageAttrChanged != null) {
+            currentPageAttrChanged.onChange();
+          }
           switch (position) {
             case 0:
               viewPager.setBackgroundResource(color1);
@@ -68,7 +77,9 @@ import com.gfee2.siddhi.signup_g2.R;
         }
 
         @Override public void onPageScrollStateChanged(int state) {
-
+          if (scrollStateChanged != null) {
+            scrollStateChanged.onPageScrollStateChanged(state);
+          }
         }
       };
     }
