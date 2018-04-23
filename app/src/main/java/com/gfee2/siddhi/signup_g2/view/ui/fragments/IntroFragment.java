@@ -1,20 +1,20 @@
 package com.gfee2.siddhi.signup_g2.view.ui.fragments;
 
-import android.arch.lifecycle.ViewModelProvider;
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+    import android.arch.lifecycle.ViewModelProvider;
+    import android.os.Bundle;
+    import android.support.annotation.Nullable;
+    import android.support.v4.app.Fragment;
+    import android.view.LayoutInflater;
+    import android.view.View;
+    import android.view.ViewGroup;
 
-import android.widget.ImageView;
-import com.gfee2.siddhi.signup_g2.R;
-import com.gfee2.siddhi.signup_g2.databinding.FragmentTaskIntroBinding;
-import com.gfee2.siddhi.signup_g2.view.ui.base.BaseFragment;
-import com.gfee2.siddhi.signup_g2.viewmodel.AppIntroViewModel;
-import java.util.Random;
-import javax.inject.Inject;
+    import android.widget.ImageView;
+    import com.gfee2.siddhi.signup_g2.R;
+    import com.gfee2.siddhi.signup_g2.databinding.FragmentTaskIntroBinding;
+    import com.gfee2.siddhi.signup_g2.view.ui.base.BaseFragment;
+    import com.gfee2.siddhi.signup_g2.viewmodel.AppIntroViewModel;
+    import java.util.Random;
+    import javax.inject.Inject;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,8 +22,8 @@ import javax.inject.Inject;
 public class IntroFragment extends BaseFragment<AppIntroViewModel, FragmentTaskIntroBinding> {
   @Inject ViewModelProvider.Factory viewModelFactory;
   private static final String ARG_SECTION_NUMBER = "section_number";
-  //int[] bgs = new int[]{R.drawable.ic_flight_24dp, R.drawable.ic_mail_24dp, R.drawable.ic_explore_24dp};
-  int[] bgs = new int[]{R.drawable.test_1, R.drawable.test_2, R.drawable.test_4};
+  int[] bgs = new int[]{R.drawable.ic_flight_24dp, R.drawable.ic_mail_24dp, R.drawable.ic_explore_24dp};
+  //int[] bgs = new int[]{R.drawable.test_1, R.drawable.test_2, R.drawable.test_4};
 
   public static IntroFragment newInstance(int sectionNumber) {
     Bundle args = new Bundle();

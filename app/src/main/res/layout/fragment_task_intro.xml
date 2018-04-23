@@ -15,13 +15,13 @@
         >
 
       <ImageView
-          android:id="@+id/section_img2"
+          android:id="@+id/sectionImg"
           android:layout_width="192dp"
           android:layout_height="192dp"
           android:layout_gravity="center"
           android:adjustViewBounds="true"
           android:alpha="0.30"
-          android:background="@drawable/test_2"
+          android:background="@drawable/ic_flight_24dp"
           android:scaleType="fitCenter"
           />
       <ImageView
@@ -32,7 +32,7 @@
           android:layout_marginRight="10dp"
           android:adjustViewBounds="true"
           android:alpha="0.30"
-          android:background="@drawable/test_4"
+          android:background="@drawable/ic_explore_24dp"
           android:scaleType="fitCenter"
           />
 

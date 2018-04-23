@@ -12,8 +12,8 @@ public class PageTransformer implements ViewPager.PageTransformer {
   @Override public void transformPage(View page, float position) {
     int pageWidth = page.getWidth();
     int pageHeight = page.getHeight();
-    //View sectionImg = page.findViewById(R.id.section_img);
-    View sectionImg2 = page.findViewById(R.id.section_img2);
+    View sectionImg = page.findViewById(R.id.sectionImg);
+    //View sectionImg2 = page.findViewById(R.id.section_img2);
     View sectionImg3 = page.findViewById(R.id.section_img3);
     View sectionLabel = page.findViewById(R.id.section_label);
     View sectionDesc = page.findViewById(R.id.section_desc);
@@ -29,17 +29,19 @@ public class PageTransformer implements ViewPager.PageTransformer {
       if (position < 0) {
         //page.setTranslationX(horzMargin - vertMargin / 2);
         sectionLabel.setTranslationX(/*horzMargin - vertMargin*/ (position) *(pageWidth/ 2));
-        //sectionImg.setTranslationX(/*horzMargin - vertMargin*/ (float) ((position) *(pageWidth/ (1.7))));
-        sectionDesc.setTranslationX(/*horzMargin - vertMargin*/ (position) *(pageWidth/ 3));
-        sectionImg2.setTranslationX(/*horzMargin - vertMargin*/ (position) *(pageWidth/ 3));
-        sectionImg3.setTranslationX(/*horzMargin - vertMargin*/ (float)((position) *(pageWidth/ (1.7))));
+        sectionImg.setTranslationX(/*horzMargin - vertMargin*/ (float) ((position) *(pageWidth/ (1.7))));
+        sectionDesc.setTranslationX(/*horzMargin - vertMargin*/
+            (float) ((position) *(pageWidth/ (0.5))));
+        //sectionImg2.setTranslationX(/*horzMargin - vertMargin*/ (position) *(pageWidth/ 3));
+        sectionImg3.setTranslationX(/*horzMargin - vertMargin*/
+            (float) ((position) *(pageWidth/ (0.5))));
       } else {
        // page.setTranslationX(-horzMargin + vertMargin / 2);
         sectionLabel.setTranslationX(/*-horzMargin + vertMargin*/ (position) *(pageWidth/ 2));
-        //sectionImg.setTranslationX(/*horzMargin - vertMargin*/ (float) ((position) *(pageWidth/ (1.7))));
+        sectionImg.setTranslationX(/*horzMargin - vertMargin*/ (float) ((position) *(pageWidth/ (1.7))));
         sectionDesc.setTranslationX(/*horzMargin - vertMargin*/
             (float) ((position) *(pageWidth/ (0.5))));
-        sectionImg2.setTranslationX(/*horzMargin - vertMargin*/ (float) ((position) *(pageWidth/ (3.1))));
+        //sectionImg2.setTranslationX(/*horzMargin - vertMargin*/ (float) ((position) *(pageWidth/ (3.1))));
         sectionImg3.setTranslationX(/*horzMargin - vertMargin*/ (float) ((position) *(pageWidth/ (2.4))));
       }
 

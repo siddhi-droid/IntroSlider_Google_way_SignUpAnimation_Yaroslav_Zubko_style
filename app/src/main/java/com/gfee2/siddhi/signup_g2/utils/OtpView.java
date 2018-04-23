@@ -96,7 +96,7 @@ public class OtpView extends View {
     hintMarginBottom = getContext().getResources().getDimension(R.dimen.hint_margin_bottom);
     hintNormalSize = getContext().getResources().getDimension(R.dimen.hint_size);
     hintSmallSize = getContext().getResources().getDimension(R.dimen.hint_small_size);
-    animationDuration = getContext().getResources().getInteger(R.integer.animation_duration);
+    //animationDuration = getContext().getResources().getInteger(R.integer.animation_duration);
     viewHeight = getContext().getResources().getDimension(R.dimen.view_height);
     hintX = 0;
     hintActualMarginBottom = 0;

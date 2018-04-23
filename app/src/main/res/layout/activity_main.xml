@@ -6,8 +6,12 @@
 
   <data>
     <variable
-        name="introVM"
-        type="com.gfee2.siddhi.signup_g2.viewmodel.AppIntroViewModel"
+        name="adapter"
+        type="com.gfee2.siddhi.signup_g2.view.adapter.IntroViewPagerAdapter"
+        />
+    <variable
+        name="handler"
+        type="com.gfee2.siddhi.signup_g2.view.adapter.IntroBindingAdapter"
         />
   </data>
 
@@ -15,15 +19,15 @@
       android:id="@+id/main_content"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-
       >
 
     <android.support.v4.view.ViewPager
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="?android:attr/actionBarSize"
         android:background="@color/cyan"
+        android:paddingBottom="?android:attr/actionBarSize"
+        app:onPageChangeListener="@{adapter.getPageSelected}"
         />
 
     <View
@@ -50,6 +54,7 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
           android:layout_gravity="start|center"
+          android:onClick="@{handler::onClickSkipOrFinish}"
           android:text="Skip"
           android:textColor="@android:color/white"
           style="@style/Widget.AppCompat.Button.Borderless"
@@ -98,6 +103,7 @@
           android:text="Finish"
           android:textColor="@android:color/white"
           android:visibility="gone"
+          android:onClick="@{handler::onClickSkipOrFinish}"
           style="@style/Widget.AppCompat.Button.Borderless"
           />
 
@@ -109,6 +115,7 @@
           android:padding="@dimen/activity_horizontal_margin"
           android:src="@drawable/ic_chevron_right_black_24dp"
           android:tint="@android:color/white"
+          app:changePage="@{container}"
           style="@style/Widget.AppCompat.Button.Borderless"
           />
     </FrameLayout>
