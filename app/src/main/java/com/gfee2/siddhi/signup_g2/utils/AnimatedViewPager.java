@@ -2,6 +2,7 @@ package com.gfee2.siddhi.signup_g2.utils;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;
+import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
@@ -16,11 +17,17 @@ public class AnimatedViewPager extends ViewPager {
     postInitViewPager();
   }
 
+  public AnimatedViewPager(Context context, AttributeSet attrs) {
+    super(context, attrs);
+    postInitViewPager();
+  }
+
   private void postInitViewPager() {
     try {
       Field scroller = ViewPager.class.getDeclaredField("mScroller");
       scroller.setAccessible(true);
-      ScrollerCustomDuration mScroller = new ScrollerCustomDuration(getContext(), new DecelerateInterpolator());
+      ScrollerCustomDuration mScroller =
+          new ScrollerCustomDuration(getContext(), new DecelerateInterpolator());
       scroller.set(this, mScroller);
     } catch (Exception e) {
 

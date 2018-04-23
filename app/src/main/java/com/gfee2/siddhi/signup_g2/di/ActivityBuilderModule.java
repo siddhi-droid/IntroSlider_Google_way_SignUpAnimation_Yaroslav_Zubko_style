@@ -1,5 +1,6 @@
 package com.gfee2.siddhi.signup_g2.di;
 
+import com.gfee2.siddhi.signup_g2.view.ui.activities.AuthActivity;
 import com.gfee2.siddhi.signup_g2.view.ui.activities.IntroActivity;
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -10,5 +11,7 @@ import dagger.android.ContributesAndroidInjector;
 
 @Module public abstract class ActivityBuilderModule {
   @ContributesAndroidInjector(modules = FragmentBuilderModule.class)
-  abstract IntroActivity mainActivity();
+  abstract IntroActivity introActivity();
+  @ContributesAndroidInjector(modules = FragmentBuilderModule.class)
+  abstract AuthActivity authActivity();
 }
